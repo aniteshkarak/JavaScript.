@@ -1,0 +1,12 @@
+body{
+    background-color: black;
+    color: white;
+}
+.head-button{
+    background-color: rgb(197, 193, 193);
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
