@@ -1,12 +1,20 @@
-body{
+/*body{
     background-color: black;
     color: white;
-}
-.head-button{
-    background-color: rgb(197, 193, 193);
+}*/
+.yellow-button{
+    background-color: yellow;
     color: black;
     padding: 10px;
     border-radius: 5px;
-    border: none;
+    border: rgb(0, 0, 0) solid 2px;
+    cursor: pointer;
+}
+.orange-button{
+    background-color: orange;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: rgb(0, 0, 0) solid 2px;
     cursor: pointer;
 }
