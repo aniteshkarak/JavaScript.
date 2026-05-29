@@ -6,6 +6,45 @@
     <title>Booleans</title>
 </head>
 <body>
-    
+    <h1>Booleans</h1>
+    <script>
+        // Booleans can only be true or false
+        let isJavaScriptFun = true;
+        let isThisHard = false;
+
+        console.log(isJavaScriptFun); // Output: true
+        console.log(isThisHard); // Output: false
+
+        // Booleans are often used in conditional statements
+        if (isJavaScriptFun) {
+            console.log("JavaScript is fun!");
+        } 
+        else {
+            console.log("JavaScript is not fun.");
+        }
+
+        if(30>=16){
+            console.log("you Can Drive");
+        }
+        else{
+            console.log("you Cannot Drive");
+        }
+
+        //Ternary Operator
+        let age = 30;
+        let canDrive = age >= 16 ? "You can drive" : "You cannot drive";
+        console.log(canDrive);
+
+        //Guard Operators
+        let isLoggedIn = false;
+        let userName = isLoggedIn && "Mr Annith";
+        console.log(userName);
+
+        //default operators
+        let userColor = null;
+        let displayColor = userColor || "Default Color";
+        console.log(displayColor);
+
+    </script>
 </body>
 </html>

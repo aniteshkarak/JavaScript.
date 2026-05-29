@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin Flip</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        button {
+            padding: 50px 30px;
+            font-size: 24px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: 5px solid #157518;
+            border-radius: 50%;
+
+            /* animation */
+            animation: pulse 1s infinite;
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7);
+            }
+            70% {
+                transform: scale(1.1);
+                box-shadow: 0 0 0 10px rgba(76, 175, 80, 0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(76, 175, 80, 0);
+            }
+        }
+        /* @keyframes flipCoin {
+            0% {
+                transform: scale(1) rotateY(0deg);
+            }
+
+            25% {
+                transform: scale(1.2) rotateY(360deg);
+            }
+
+            50% {
+                transform: scale(1) rotateY(720deg);
+            }
+
+            75% {
+                transform: scale(1.2) rotateY(1080deg);
+            }
+
+            100% {
+                transform: scale(1) rotateY(1440deg);
+            }
+         } */
+
+    </style>
+
+</head>
+<body>
+    <button onclick="
+    // this.style.animation = 'flipCoin 1s linere';
+
+    setTimeout(() => {
+        const randomNumber = Math.random(); 
+        let computerMove = '';
+
+        if (randomNumber >= 0 && randomNumber < 1/2) {
+            computerMove = 'Heads';
+        }
+        else if (randomNumber >= 1/2 && randomNumber < 1) {
+            computerMove = 'Tails';
+        }
+        // console.log(computerMove);
+
+        let result = '';
+
+        if (computerMove === 'Heads') {
+            result = 'You win!';
+        }
+        else if (computerMove === 'Tails') {
+            result = 'You lose!';
+        }
+        
+
+        alert(`Computer chose ${computerMove}. ${result}`);
+    }, 500);">Flip a Coin</button>
+</body>
+</html>
