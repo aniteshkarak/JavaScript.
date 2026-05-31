@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin Flip</title>
+
+    <style>
+        body{
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1e1e1e;
+            font-family: Arial, sans-serif;
+        }
+
+        .container{
+            text-align: center;
+        }
+
+        .coin-btn{
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid white;
+            background-color: gold;
+            color: black;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 10px;
+            transition: 0.3s;
+        }
+
+        .coin-btn:hover{
+            transform: scale(1.1);
+        }
+
+        .reset-btn{
+            margin-top: 20px;
+            padding: 12px 25px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            background-color: crimson;
+            color: white;
+            cursor: pointer;
+        }
+
+        .reset-btn:hover{
+            opacity: 0.8;
+        }
+
+        h1{
+            color: white;
+            margin-bottom: 30px;
+        }  
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Coin Flip Game</h1>
+
+        <button class="coin-btn" onclick="playGame('Heads')">Head</button>
+        <button class="coin-btn" onclick="playGame('Tails')">Tail</button>
+        <br>
+        <button class="reset-btn" onclick="resetScore()">Reset Score</button>
+    </div>
+
+    
+
+    <script>
+
+        let score = JSON.parse(localStorage.getItem('score')) || {
+            wins: 0,
+            losses: 0
+        };
+
+        function playGame(guess) {
+
+            const randomNumber = Math.random();
+            let computerMove = '';
+
+            if (randomNumber < 0.5) {
+                computerMove = 'Heads';
+            } else {
+                computerMove = 'Tails';
+            }
+
+            if (guess === computerMove) {
+                score.wins++;
+                alert(`You win! The coin landed on ${computerMove}
+                    Wins: ${score.wins}
+                    Losses: ${score.losses}`
+                );
+            } 
+            else {
+                score.losses++;
+                alert(`You lose! The coin landed on ${computerMove}
+                    Wins: ${score.wins}
+                    Losses: ${score.losses}`
+                );
+            }
+
+            localStorage.setItem('score', JSON.stringify(score));
+        }
+
+        function resetScore() {
+            score = { wins: 0, losses: 0 };
+            localStorage.setItem('score', JSON.stringify(score));
+            alert('Score has been reset!');
+        }
+
+    </script>
+
+</body>
+</html>

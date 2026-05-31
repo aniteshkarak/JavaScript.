@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <script>
+        /*const product = {
+            name: 'iPhone',
+            price: 104999
+        };
+        console.log(product);
+        console.log(product.name);
+        console.log(product.price);
+
+        product.name = 'iPhone 17 Pro';
+        console.log(product);*/
+
+       /* const Products2 = {
+            name: 'iPhone',
+            ['delivery-time']: '3-5 days',
+            rating:{
+                stars: 4.5,
+                count: 100
+            },
+            fun: function(){
+                console.log('This is a function inside an object');
+            }
+        };
+        console.log(Products2);
+        console.log(Products2.name);
+        console.log(Products2['name']);
+        console.log(Products2['delivery-time']);
+
+        console.log(Products2.rating.stars);
+        Products2.fun();
+
+        // JavaScript object to JSON
+        JSON.stringify(Products2);
+        console.log(JSON.stringify(Products2));
+
+        // JSON to JavaScript object
+        const jsonString = JSON.stringify(Products2);
+        console.log(JSON.parse(jsonString));
+
+        //Local Storage
+        localStorage.setItem('product', JSON.stringify(Products2));
+        const storedProduct = localStorage.getItem('product'); */
+
+        // Auto Boxing
+        console.log('Hello'.length);
+        console.log('Hello'.toUpperCase());
+        console.log('Hello'.toLowerCase());
+
+        const object1 = {
+            message: 'Hello World'
+        };
+        // console.log(object1.message);
+
+        const object2 = object1;
+        
+        object1.message = 'Hello JavaScript';
+        console.log(object1);
+        console.log(object2);
+
+        const object3 = {
+            message: 'Good Job'
+        };
+        console.log(object3==object1);
+
+        const object4 = {
+            message: 'Good Job',
+        };
+
+        const {message} = object4;
+        console.log(message);
+    </script>
+</body>
+</html>
