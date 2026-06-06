@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const myArray = [1, 2, 3, 4, 5];
+        console.log(myArray);
+
+        console.log(myArray[1]);
+        myArray[0] = 99;
+        console.log(myArray);
+
+        const anotherArray = [1, 'hello', true, null, undefined, { name: 'Annitha' }, [1, 2, 3]];
+        console.log(anotherArray);
+
+        console.log(myArray.length);
+        console.log(anotherArray.length);
+
+        myArray.push(100);
+        console.log(myArray);
+
+        myArray.splice(2, 0, 50);
+        console.log(myArray);
+    </script>
+</body>
+</html>
