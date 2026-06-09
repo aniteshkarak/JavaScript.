@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
 
-    <link rel="stylesheet" href="rock-paper-scissor.css">
+    <!-- <style src="auto-paly_rock-paper-scissor.css"></style> -->
+    <link rel="stylesheet" href="auto-play_rock-paper-scissor.css">
 
 </head>
 <body>
@@ -27,6 +28,8 @@ scores.Wins = 0; scores.loses = 0; scores.ties = 0; localStorage.setItem('scores
 updateScoreElement();
     " class="reset-btn">Reset Scores</button>
 
-    <script src="script.js"></script>
+    <button onclick="autoPlay();" class="auto-play-btn" id = "auto-play-btn">Auto Play</button>
+
+    <script src="Auto_play.js"></script>
 </body>
 </html>
