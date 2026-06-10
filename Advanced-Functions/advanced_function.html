@@ -7,6 +7,7 @@
 </head>
 <body>
     <script>
+        /*
         setTimeout(function() {
             console.log("Timeout1");
             console.log("Timeout2");
@@ -16,6 +17,27 @@
             console.log("Interval1");
             console.log("Interval2");
         }, 2000);
+        */
+       [
+        'make dinner',
+        'wash dishes',
+        'do laundry'
+       ].forEach(function(task, index) {
+        if (task === 'make dinner'){
+            return;
+        }
+        console.log(`Task ${index + 1}: I need to ${task}`);
+       });
+
+       const returnFunction = function() {
+        return "This is a return function";
+       };
+        console.log(returnFunction());
+
+       const arrowFunction = (a, b) => {
+        return a + b;
+       };
+       console.log(arrowFunction(5, 10));
     </script>
 </body>
 </html>
