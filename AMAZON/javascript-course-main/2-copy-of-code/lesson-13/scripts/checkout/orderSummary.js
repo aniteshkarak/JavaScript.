@@ -48,7 +48,7 @@ export function renderOrderSummery (){
                         ${matchingProduct.name}
                     </div>
                     <div class="product-price">
-                        ${formatCurrency(matchingProduct.priceCents)}
+                        ${matchingProduct.getPrice()}
                     </div>
 
 
