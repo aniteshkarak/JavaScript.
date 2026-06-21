@@ -57,6 +57,21 @@ class Clothing extends Product {
     `;
   }
 }
+/*
+function logThis(){
+  console.log(this);
+}
+logThis();
+logThis.call('Hello');
+
+this 
+const object3 = {
+  method: () => {
+    console.log(this);
+  }
+};
+object3.method();
+*/
 
 export const products = [
   {
