@@ -7,13 +7,22 @@ import { loadCart } from '../data/cart.js';
 import { loadProducts, loadProductsFetch } from '../data/products.js';
 
 function loadPage () {
-    await loadProductsFetch();
+    try{
+        //throw 'error1';
 
-    const value = await new Promise((resolve) => {
-        loadProducts(() => {
-            resolve('value3');
+        await loadProductsFetch();
+
+        const value = await new Promise((resolve, reject) => {
+            loadProducts(() => {
+                // reject('erroe3');
+                resolve('value3');
+            });
         });
-    });
+
+    } catch(error){
+
+    }
+    
 
     renderOrderSummery();
     renderPaymentSummery(); 
