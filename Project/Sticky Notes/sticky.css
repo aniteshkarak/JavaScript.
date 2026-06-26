@@ -102,20 +102,22 @@ body{
 }
 
 .delete-btn{
-    width: 40px;
-    height: 40px;
+    background: transparent;
     border: none;
-    border-radius: 8px;
-    background-color: #ffffff;
     cursor: pointer;
-    font-size: 1rem;
-    transition: 0.3s;
+    font-size: 1.2rem;
+    color: #555;
+    transition: all 0.3s ease;
+}
+
+.delete-btn:active{
+    transform: scale(0.95);
 }
 
 .delete-btn:hover{
-    background-color: #fee2e2;
+    color: #ef4444;
+    transform: scale(1.15);
 }
-
 .note-content{
     flex: 1;
     border: none;
