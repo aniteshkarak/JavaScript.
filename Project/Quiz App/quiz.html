@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myy Quiz</title>
+</head>
+<body>
+    <div>
+        <!-- Header -->
+        <header class="header">
+            <h1 class="title">🧠 JavaScript Quiz</h1>
+
+            <div class="header-info">
+                <span class="score">
+                    Score:
+                    <span class="score-value">0</span>
+                </span>
+            </div>
+        </header>
+
+        <!-- Progress -->
+        <div class="progress-section">
+            <div class="progress-info">
+                <span class="question-number">
+                    Question <span class="current-question">1</span> of
+                    <span class="total-question">10</span>
+                </span>
+
+                <span class="progress-percent">10%</span>
+
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz Card -->
+        <div class="quiz-card">
+            <div class="timer">
+                ⏱️ Time Left:
+                <span class="time">30</span>s
+            </div>
+
+            <h2 class="question">
+                What is the output of <code>typeof []</code> ?
+            </h2>
+
+            <div class="options">
+                <button class="option">Object</button>
+                <button class="option">Array</button>
+                <button class="option">String</button>
+                <button class="option">Undefined</button>
+            </div>
+
+            <div class="result-message"></div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="navigation">
+            <button class="prev-btn">⬅ Previous</button>
+            <button class="next-btn">Next ➜</button>
+        </div>
+
+        <!-- Result -->
+        <div class="result-screen">
+
+            <h1 class="result-title">
+                🎉 Congratulations!
+            </h1>
+
+            <p class="final-score">
+                Final Score:
+                <span class="score-value">8 / 10</span>
+            </p>
+
+            <p class="percentage">
+                Percentage:
+                <span class="percentage-value">80%</span>
+            </p>
+
+            <p class="correct-answer">
+                ✅ Correct Answers:
+                <span class="correct-value">8</span>
+            </p>
+
+            <p class="wrong-answer">
+                ❌ Wrong Answers:
+                <span class="wrong-value">2</span>
+            </p>
+
+            <button class="restart-btn">
+                🔄 Restart Quiz
+            </button>
+
+        </div>
+
+    </div>
+</body>
+</html>
